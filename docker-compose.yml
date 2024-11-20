@@ -1,0 +1,24 @@
+services:
+  web:
+    container_name: medcardservice
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    depends_on:
+      - db
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://db:5432/medcard_db
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+  db:
+    image: postgres:latest
+    container_name: db
+    ports:
+      - "5433:5432"  # Внешний порт 5433 перенаправляется на внутренний порт 5432 в контейнере
+    environment:
+      - POSTGRES_DB=medcard_db
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    restart: unless-stopped

@@ -1,0 +1,37 @@
+# Логи
+*.log
+
+# Директории сборки
+/build/
+target/
+
+# Временные файлы
+*.tmp
+*.temp
+
+# Классы Java
+*.class
+
+# Общие настройки IDE
+.idea/
+*.iml
+*.ipr
+*.iws
+*.user
+.vscode/
+
+# Зависимости и сборка
+*.jar
+*.war
+*.ear
+*.zip
+
+# Файлы окружения
+.env
+.env.local
+
+# Содержимое, сгенерированное IDE или системами сборки
+/.gradle/
+/out/
+/mvnw
+/mvnw.cmd

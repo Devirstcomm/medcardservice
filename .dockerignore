@@ -1,0 +1,6 @@
+*.log
+*.md
+.idea/
+*.iml
+target/*  # исключаем все файлы в target
+!target/*.jar  # кроме .jar файлов
